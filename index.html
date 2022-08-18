@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Passwort-Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>Passwort-Generator</h1>
+  
+  <form id="password_generator">
+    <fieldset>
+        <legend>Optionen</legend>
+        <div>
+          <input type="number" id="password_length" name="password_length" placeholder="4-256" value="8" min="4" max="256">
+          <label for="password_length">Länge des Passworts</label>
+        </div>
+        <div>
+          <input type="checkbox" id="password_allow_numbers" name="password_allow_numbers" checked>
+          <label for="password_allow_numbers">Passwort beinhaltet Zahlen [0-9]</label>
+        </div>
+        <div>
+          <input type="checkbox" id="password_allow_lowercase_letters" name="password_allow_lowercase_letters" checked>
+          <label for="password_allow_lowercase_letters">Passwort beinhaltet Kleinbuchstaben [a-z]</label>
+        </div>
+        <div>
+          <input type="checkbox" id="password_allow_uppercase_letters" name="password_allow_uppercase_letters">
+          <label for="password_allow_uppercase_letters">Passwort beinhaltet Großbuchstaben [A-Z]</label>
+        </div>
+        <div>
+          <input type="checkbox" id="password_allow_special_characters" name="password_allow_special_characters">
+          <label for="password_allow_special_characters">Passwort beinhaltet Sonderzeichen [#, @, %, §, &]</label>
+        </div>
+        <div>
+          <input type="button" id="suggest_passwords" name="suggest_passwords" value="Passwörter vorschlagen" onClick="suggestPasswords();">
+        </div>
+    </fieldset>
+  </form>
+
+  <div id="suggested_passwords">
+    <h4>Vorgeschlagene Passwörter</h4>
+    <p class="suggested_password" id="suggested_password1" data-password="" onClick="copyPassword('suggested_password1');">
+    &nbsp;</p>
+    <p class="suggested_password" id="suggested_password2" data-password="" onClick="copyPassword('suggested_password2');">
+    &nbsp;</p>
+    <p class="suggested_password" id="suggested_password3" data-password="" onClick="copyPassword('suggested_password3');">
+    &nbsp;</p>
+    <p>
+      Klicke auf eines der Passwörter, um es in die Zwischenablage zu kopieren.
+    </p>
+    <p id="password_copied">
+      Passwort kopiert, probier es aus:<br />
+      <textarea></textarea>
+    </p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

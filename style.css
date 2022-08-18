@@ -1,0 +1,104 @@
+body {
+    background-color:           rgb(255, 255, 255);
+    font-family:                'Quicksand';
+    color:                      rgb( 14,  29,  23);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:                      rgb( 23, 166, 176);
+}
+
+div#suggested_passwords {
+    visibility:                 hidden;
+}
+
+.suggested_password {
+    background-color:           rgb( 70, 70,  70);
+    padding:                    5px;
+}
+
+legend {
+    color:                      rgb( 23, 166, 176);
+    font-weight:                bold;
+}
+
+label {
+    padding:                    5px;
+    cursor:                     pointer;
+}
+
+input#password_length {
+    width:                      40px;
+    color:                      rgb( 23, 166, 176);
+    border:                     3px solid rgb( 23, 166, 176);
+    border-radius:              25px;
+    text-align:                 right;
+    font-weight:                bold;
+    cursor:                     pointer;
+}
+
+[type="checkbox"] + label {
+    position:                   absolute;
+    cursor:                     pointer;
+
+}
+[type="checkbox"] {
+    -webkit-appearance:         none;
+}
+[type="checkbox"] + label:before {
+    width:                      15px;
+    height:                     15px;
+    color:                      rgb( 23, 166, 176);
+    border:                     3px solid rgb( 23, 166, 176);
+    border-radius:              25px;
+    content:                    '';
+    float:                      left;
+    margin-right:               5px;
+    position:                   relative;
+}
+input[type="checkbox"]:checked+label:before {
+    box-shadow:                 inset 0px 0px 0px 3px #fff;
+    background-color:           rgb( 23, 166, 176);
+    color:                      rgb(255, 255, 255);
+}
+
+input#suggest_passwords {
+    margin-top:                 15px;
+    background-color:           rgb(255, 255, 255);
+    color:                      rgb( 23, 166, 176);
+    border:                     3px solid rgb( 23, 166, 176);
+    border-radius:              25px;
+    padding:                    10px;
+    font-size:                  bigger;
+    font-weight:                bold;
+            transition:         background 0.2s;
+    -webkit-transition:         background 0.2s;
+    cursor:                     pointer;
+}
+
+input#suggest_passwords:hover {
+    background-color:           rgb( 23, 166, 176);
+    color:                      rgb(255, 255, 255);
+}
+
+span.char_number {
+    color:                      rgb(255,   0,   0);
+}
+span.char_lowercase {
+    color:                      rgb(  0, 255,   0);
+}
+span.char_uppercase {
+    color:                      rgb(255, 255,   0);
+}
+span.char_special {
+    color:                      rgb(100, 100, 255);
+}
+
+#password_copied {
+    font-weight:                bold;
+    visibility:                 hidden;
+}
+
+#password_copied > textarea {
+    width:                      75%;
+}
